@@ -1,3 +1,4 @@
+
 #include <iostream>
 using namespace std;
 
@@ -20,7 +21,8 @@ void removeChar(char* s, char c) {
             || s[i] == ' ' && s[i+1] == ' ') i++; // Remove all extra spaces
         */
     }
-    *s = '\0'; // NULL at the end
+    *j = '\0'; // NULL at the end
+    s = j;
 }
 
 int main()
