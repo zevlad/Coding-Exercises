@@ -1,4 +1,3 @@
-
 #include <iostream>
 using namespace std;
 
@@ -8,21 +7,9 @@ void removeChar(char* s, char c) {
         cout << "Empty String\n"; 
         return;
     }
-    
-    char* j = s;
-    while(*s) {
-        if (*s != c) *j++ = *s; // Add all elements that are not char c
-        s++;
-        
-        //if (s[i] == c && s[i+1] == ' ') i++; // Remove extra spaces after char c
-        
-        /*
-        while (s[i] == c && s[i+1] == ' ' 
-            || s[i] == ' ' && s[i+1] == ' ') i++; // Remove all extra spaces
-        */
-    }
+    char* j; 
+    for(j = s; *s; s++) if (*s != c) *j++ = *s;
     *j = '\0'; // NULL at the end
-    s = j;
 }
 
 int main()
